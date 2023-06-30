@@ -10,7 +10,8 @@ import MapKit
 
 struct MapView: View {
     var coordinates: CLLocationCoordinate2D
-    @State private var region = MKCoordinateRegion()
+    @State
+    private var region = MKCoordinateRegion()
 
     var body: some View {
         Map(coordinateRegion: $region)

@@ -6,9 +6,15 @@
 //  Copyright © 2023 Apple. All rights reserved.
 //
 
-var landmarks: [Landmark] = load("landmarkData.json")
-
 import Foundation
+import Combine
+
+
+final class ModelData: ObservableObject {
+    @Published
+    var landmarks: [Landmark] = load("landmarkData.json")
+    
+}
 
 func load<T: Decodable> (_ filename: String) -> T {
     let data: Data
